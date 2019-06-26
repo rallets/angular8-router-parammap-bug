@@ -16,8 +16,8 @@ export class AppComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        if (this.route.parent) {
-            this.route.parent.paramMap
+        if (this.route) {
+            this.route.paramMap
                 .subscribe(params => {
                     new RouteMapper(params).do();
                 });
